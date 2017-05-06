@@ -31,7 +31,7 @@ arrusuario.forEach(function(ele){
 	//var dentroDiv = document.createTextNode(info);
 	
 
-	var info = (ele.img+ "<br>" +"<b>Nombre: </b>"+ele.nombre+ " " +
+	var info = (ele.img+ "   " +"<b>Nombre: </b>"+ele.nombre+ " " +
 		 ele.apellido+ "<br>" + "<b>Edad : </b>"+  ele.edad+ "<br>"+ "<b>Hobbies : </b> <i>" + "<ul>" + "<li>" + ele.hobbies+ "</li>"+"<li>" +ele.hobbies2+ 
 		 "</li>"+ "<li>"+ ele.hobbies3 + "</li></ul></i><br></b>"); 
 	divlistasquad.innerHTML += info;

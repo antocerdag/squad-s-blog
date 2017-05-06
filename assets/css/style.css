@@ -9,5 +9,7 @@ html {
 
 body {
     display: table-cell;
+    margin: auto;
+    width: 500px;
     
 }
