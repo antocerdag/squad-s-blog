@@ -32,6 +32,16 @@ arrusuario.forEach(function(ele){
 	divlistasquad.appendChild(usuario);
 	//var dentroDiv = document.createTextNode(info);
 	
+	var areatexto = document.getElementById("areatexto");
+	var cajatexto = document.createElement("textarea");
+	var boton = document.createElement("button");
+
+	cajatexto.name = "post";
+	cajatexto.maxLength = "5000";
+	cajatexto.cols = "80";
+	cajatexto.rows = "40";
+	areatexto.appendChild(cajatexto);
+	areatexto.appendChild(boton);
 
 	var info = (ele.img+ "  " +"<b>Nombre: </b>"+ele.nombre+ " " +
 		 ele.apellido+ "<br>" + "<b>Edad : </b>"+  ele.edad+ "<br>"+ "<b>Hobbies : </b> <i>" + "<ul>" + "<li>" + ele.hobbies+ "</li>"+"<li>" +ele.hobbies2+ 
