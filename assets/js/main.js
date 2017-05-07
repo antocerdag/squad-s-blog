@@ -9,7 +9,7 @@ function Misquad(nombre,apellido,edad,hobbies,hobbies2,hobbies3,id){
 	this.id = id;
 	this.foto = "<img width='150' align='left' id='userfoto 'src='assets/img/imguser-0" + this.id + "id.png'>";
 	this.caja = "<input width='150' type='text' id='boton" + this.id + "'>" + "<br>"; //aca se ingresa el comentario
-	this.boton = "<button  id='cajaboton" + this.id + "' onclick='" + "'>Enviar</button>";
+	this.boton = "<button  id='cajaboton" + this.id + "onclick='Comentarios()'" + "'>Enviar</button>";
 	this.heart = "<button width='25' align='left' id='botonheart' onclick='sumar()'" + "<i class='fa fa-heart' aria-hidden='true'></i>" + "</button>";
 }
 
@@ -48,13 +48,15 @@ user.forEach(function(ele){
 function Comentarios(id_miembro,comentario,likes){
 	this.id_miembro = id_miembro;
 	this.comentario = comentario;
+	this.heart = "<button width='25' align='left' id='botonheart' onclick='sumar()'" + "<i class='fa fa-heart' aria-hidden='true'></i>" + "</button>";
 	var numero=0;
 	this.likes = function sumar(){ 
 		numero++;
 		return numero;
 	};
 	
-	//this.botonLike = "<button onclick='" + this.likes() + "'></button>";
+	var mostrarcomentario = document.getElementById("listasquad");
+	var comentarioadd = (this.comentario + this.heart + this.likes)
 }
 var numero=0;
 function sumar(){ 
