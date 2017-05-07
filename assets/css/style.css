@@ -6,9 +6,9 @@ html {
 body {
     display: table-cell;
     margin: auto;
-    
-    background-color: #e7e7e7;
-    
+	background-color: #e7e7e7;
+    /*esto le da un margen automatico al body
+    y un color */
 }
 
 
@@ -19,6 +19,8 @@ header {
 	height: 150px;
 	margin-top: -20px;
 	overflow:auto
+	/*esto le da el color a la caja de arriba
+	junto con un ancho,alto y margen*/
 }
 
 
@@ -26,7 +28,8 @@ h1{
 	text-align: center;
 	margin-top: 55px;
 	color: #ffffff;
-
+	/*le da el color al texto y
+	lo alinea al centro*/
 }
 
 
@@ -34,19 +37,26 @@ p{
 	text-align: center;
 	color: #ffffff;
 	margin-top: -20px;
+	/*le da color al txt y lo alinea
+	al centro de la caja donde se encuentra*/
 }
 
 a {
 	color: tomato;
+	/*le da color a la etiqueta a ( el corazon)*/
 }
 
 #listasquad{
 	margin-left:50px;
 	margin-top: 25px;
+	/*le da espacio en la izq y arriba,
+	para mover un poco a todos los usuarios*/
 }
 
 #listasquad ul{
 	margin-left: 135px;
+	/*le da un margen a la izq
+	para mover la lista de hobbies*/
 
 }
 
@@ -57,15 +67,17 @@ a {
 	border-radius: 12px;
 	width: 80px;
 	height: 25px;
+	/*caracteristicas que toma el botón*/
 
 }
 
 #listasquad input {
 	margin-left: 185px;
-
+	/*le da un margen a la caja donde se ingresa el comentario*/
 }
 #botonheart{
 	margin-left: -10px;
+	/*margen para el boton de corazon*/
 }
 
 
