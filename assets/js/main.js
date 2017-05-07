@@ -7,9 +7,10 @@ function Misquad(nombre,apellido,edad,hobbies,hobbies2,hobbies3,id){
 	this.hobbies3 = hobbies3;
 
 	this.id = id;
-	this.foto = "<img src='assets/imgs/avataressquad-0" + this.id + "_360.png'>";
+	this.foto = "<img src='assets/img/imguser-0'" + this.id + "'>";
 	this.caja = "<input type='text' id='boton" + this.id + "'>"; //aca se ingresa el comentario
-	this.boton = "<button id='" + this.id + "' onclick='" + /*nuevoComentario.likes() +*/ "'>Comenta ... </button>"; //boton dejar comentario
+	this.boton = "<button id='" + this.id + "' onclick='" + "'>Enviar</button>";
+	//this.heart = "<button onclick="sumar()"" + "<i class="fa fa-heart" aria-hidden="true"></i>" + "</button>";
 }
 
 
