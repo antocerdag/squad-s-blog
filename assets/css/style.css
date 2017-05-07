@@ -52,6 +52,11 @@ a {
 
 #listasquad button {
 	margin-left: 220px;
+	background-color: #e7e7e7; 
+	color: black;
+	border-radius: 12px;
+	width: 80px;
+	height: 25px;
 
 }
 
