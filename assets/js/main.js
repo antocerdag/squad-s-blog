@@ -1,4 +1,4 @@
-function Misquad(img,nombre,apellido,edad,hobbies,hobbies2,hobbies3){
+function Misquad(img,nombre,apellido,edad,hobbies,hobbies2,hobbies3,id){
 	this.img = img;
 	this.nombre = nombre;
 	this.apellido = apellido;
@@ -6,10 +6,13 @@ function Misquad(img,nombre,apellido,edad,hobbies,hobbies2,hobbies3){
 	this.hobbies = hobbies;
 	this.hobbies2 = hobbies2;
 	this.hobbies3 = hobbies3;
+
+	this.id = id;
+	this.foto = "<img src='assets/imgs/avataressquad-0" + this.id + "_360.png'>";
+	this.caja = "<input type='text' id='boton" + this.id + "'>"; //aca se ingresa el comentario
+	this.boton = "<button id='" + this.id + "' onclick='" + /*nuevoComentario.likes() +*/ "'>Comenta ... </button>"; //boton dejar comentario
 }
 
-var fotoFran = new Misquad()
-fotoFran.src = "http://quebolu.com/uploads/meme1419396805gen.png";
 
 
 var fran = new Misquad("Francisca","Ojeda",28,"Roller derby", "Lettering", "Juegos de mesa");
@@ -30,18 +33,8 @@ arrusuario.forEach(function(ele){
 	var divlistasquad = document.getElementById("listasquad");
 	var usuario = document.createElement("div");
 	divlistasquad.appendChild(usuario);
-	//var dentroDiv = document.createTextNode(info);
 	
-	var areatexto = document.getElementById("areatexto");
-	var cajatexto = document.createElement("textarea");
-	var boton = document.createElement("button");
-
-	cajatexto.name = "post";
-	cajatexto.maxLength = "5000";
-	cajatexto.cols = "80";
-	cajatexto.rows = "40";
-	areatexto.appendChild(cajatexto);
-	areatexto.appendChild(boton);
+	var info = document.getElementById("miembro" + arrusuario.indexOf(ele).toString());
 
 	var info = (ele.img+ "  " +"<b>Nombre: </b>"+ele.nombre+ " " +
 		 ele.apellido+ "<br>" + "<b>Edad : </b>"+  ele.edad+ "<br>"+ "<b>Hobbies : </b> <i>" + "<ul>" + "<li>" + ele.hobbies+ "</li>"+"<li>" +ele.hobbies2+ 
@@ -51,12 +44,12 @@ arrusuario.forEach(function(ele){
 })
 
 
-
-var numero=0;
-function sumar (){ 
-numero++;
-return numero;
-}
-function hacerClick(){
-    document.getElementById("caja").innerHTML = sumar();
+function Comentarios(id_miembro,comentario,likes){
+	this.id_miembro = id_miembro;
+	this.comentario = comentario;
+	this.likes = function(){
+		var numero = 0;
+		return (numero + 1);
+	};
+	this.botonLike = "<button onclick='" + this.likes() + "'></button>";
 }
