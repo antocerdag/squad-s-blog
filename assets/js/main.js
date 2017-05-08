@@ -11,6 +11,15 @@ function Misquad(nombre,apellido,edad,hobbies,hobbies2,hobbies3,id){
 	this.caja = "<input width='150' type='text' id='boton" + this.id + "'>" + "<br>"; //aca se ingresa el comentario
 	this.boton = "<button  id='cajaboton" + this.id + "onclick='addcomentario()'" + "'>Enviar</button>";
 	this.heart = "<button width='25' align='left' id='botonheart' onclick='sumar()'" + "<i class='fa fa-heart' aria-hidden='true'></i>" + "</button>";
+
+	this.comentario = function(){
+	var text = this.boton;
+	var contTex = this.caja.value;
+	contTex[0].innerHTML +=  text.value +"<br>";
+	text.value = "";
+}
+
+
 }
 
 
@@ -38,11 +47,12 @@ user.forEach(function(ele){
 	var infousuarios = (ele.foto +"<br><b>Nombre: </b>" + ele.nombre + "<br><b>Apellido: </b>" + ele.apellido + 
 	"<br><b>Edad: </b>" + ele.edad + "<br><b>Hobbies: </b>" + "<ul>" + "<li>" + ele.hobbies + "</li>" + 
 	"<li>" + ele.hobbies2 + "</li>" + "<li>" + ele.hobbies3 + "</li>" + "</ul>" + ele.caja +
-	 "<br>" + ele.boton+ ele.heart +  "<br>"+"<br>" );
+	 "<br>"+ ele.boton+ ele.heart +  "<br>"+"<br>" );
 
 	info.innerHTML += infousuarios;
 
 })
+
 
 
 function Comentarios(id_miembro,comentario,likes){
@@ -59,7 +69,7 @@ function Comentarios(id_miembro,comentario,likes){
 	var comentarioadd = (this.comentario + this.heart + this.likes)
 	
 }
-
+/*
 var comentariosin = [];
 	// Cuando hacen click en el boton enviar, agrega el comentario en el array
 	var addcomentario = document.getElementById('cajaboton');
@@ -86,7 +96,10 @@ function mergeHTML (){
 function printHTML (html){
   records.innerHTML = '';
   
-}
+}*/
+
+
+
 
 
 var numero=0;
